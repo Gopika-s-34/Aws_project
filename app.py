@@ -25,7 +25,7 @@ def register():
 
         conn = get_db_connection()
         cursor = conn.cursor()
-        cursor.execute('INSERT INTO users (username, password) VALUES (%s, %s)', (username, hashed_password))
+        cursor.execute('INSERT INTO users (username, password_hash) VALUES (%s, %s)', (username, hashed_password))
         conn.commit()
         cursor.close()
         conn.close()
@@ -47,7 +47,8 @@ def login():
         cursor.close()
         conn.close()
 
-        if user and check_password_hash(user[0], password):
+        if user and check_password_hash(user['password_hash'], password):
+            session['user_id']= username
             return redirect(url_for('dashboard'))
         else:
             return "Invalid credentials", 401
@@ -70,8 +71,8 @@ def home():
 # Logout
 @app.route('/logout')
 def logout():
-    session.pop('user_id', None)
+    #session.pop('user_id', None)
     return redirect(url_for('login'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0",port=5000,debug=True)

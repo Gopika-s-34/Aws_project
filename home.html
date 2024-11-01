@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Virtual Classroom</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">AWS Virtual Classroom</div>
+            <nav>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to AWS Virtual Classroom</h1>
+        <p>Your gateway to learning with the latest technology</p>
+        <a href="/register" class="btn-primary">Register Now</a>
+    </section>
+
+    <section class="about">
+        <h2>About Us</h2>
+        <p>We provide a virtual classroom experience hosted on AWS, offering a wide range of courses in cloud computing, AI, and modern technologies. Learn from experts in the industry, and download learning materials straight from the cloud.</p>
+        <img src="https://via.placeholder.com/300x150" alt="Student learning online">
+    </section>
+
+    <section class="courses">
+        <h2>Our Courses</h2>
+        <p>Explore our available courses in cutting-edge technology fields such as:</p>
+        <div class="course-cards">
+            <div class="card">
+                <h3>Cloud Computing</h3>
+                <p>Learn how to leverage AWS for cloud-based applications.</p>
+            </div>
+            <div class="card">
+                <h3>Artificial Intelligence</h3>
+                <p>Dive deep into AI and machine learning technologies.</p>
+            </div>
+            <div class="card">
+                <h3>Python Programming</h3>
+                <p>Master Python for automation, data science, and development.</p>
+            </div>
+        </div>
+        <a href="/register" class="btn-secondary">Join and Access All Courses</a>
+    </section>
+
+</body>
+</html>

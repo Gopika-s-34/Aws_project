@@ -181,72 +181,99 @@ header {
 }
 
 /* Dashboard Section */
-.dashboard {
-    text-align: center;
-    padding: 40px 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #f3f4f6;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.dashboard h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.profile img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.course-materials {
+/* Navbar Styles */
+.navbar {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6a11cb;
+    background-image: linear-gradient(315deg, #6a11cb 0%, #2575fc 74%);
+    padding: 1rem;
+    color: white;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Main Section Styles */
+.materials {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.course-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 1rem;
 }
 
 .btn-download {
-    background-color: #0072ff;
-    color: #fff;
-    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
     border: none;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
-    font-size: 1rem;
     cursor: pointer;
 }
 
 .btn-download:hover {
-    background-color: #005bb5;
+    background-color: #218838;
 }
 
-.btn-logout {
-    background-color: #d9534f;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-}
+/* Footer Styles */
 
-.btn-logout:hover {
-    background-color: #c9302c;
-}
-
-/* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
     background-color: #333;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-content a {
+    color: #1e90ff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 5px;
 }
 

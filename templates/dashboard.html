@@ -3,23 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Dashboard</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-    <section class="dashboard">
-        <h1>Course Dashboard</h1>
-        <div class="profile">
-            <img src="https://via.placeholder.com/150" alt="Profile Picture">
+    <header>
+        <div class="navbar">
+            <h1>Welcome to Your Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="course-materials">
-            <button class="btn-download">Download Course Material 1</button>
-            <button class="btn-download">Download Course Material 2</button>
-        </div>
-        <button class="btn-logout">Logout</button>
-    </section>
+    </header>
 
+    <main>
+        <section class="materials">
+            <h2>Your Course Materials</h2>
+            <div class="course-cards">
+                <div class="card">
+                    <h3>Python Course Material</h3>
+                    <p>Click the button below to download your PDF.</p>
+                    <button class="btn-download">Download</button>
+                </div>
+                <div class="card">
+                    <h3>Python Course Material</h3>
+                    <p>Click the button below to download your PDF.</p>
+                    <button class="btn-download">Download</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+       <div class="footer-content">
+           <p>© 2024 AWS Virtual Classroom. All rights reserved. | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a></p>
+           <p>Contact us: <a href="mailto:support@awsvirtualclassroom.com">support@awsvirtualclassroom.com</a> | +1 (123) 456-7890</p>
+           <p>"The beautiful thing about learning is that no one can take it away from you." – B.B. King</p>
+           <p>Empowering your learning journey with the best tools and resources. Join us and stay ahead in technology.</p>
+           <div class="social-links">
+                Follow us: 
+                <a href="https://facebook.com/awsvirtualclassroom" target="_blank">Facebook</a> | 
+                <a href="https://twitter.com/awsvirtualclassroom" target="_blank">Twitter</a> | 
+                <a href="https://linkedin.com/company/awsvirtualclassroom" target="_blank">LinkedIn</a>
+           </div>
+           <p>Proudly built with AWS technologies. Visit our <a href="/about">About Us</a> page to learn more.</p>
+           <p>Keep learning, keep growing! Visit our <a href="/resources">Resources</a> page for more learning materials.</p>
+           <p>Join our community of learners and professionals. Let's achieve more, together.</p>
+       </div>
+   </footer>
 </body>
 </html>
-
